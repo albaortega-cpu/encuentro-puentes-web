@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2E2348">
+<title>I Encuentro Científico-Educativo: Puentes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="hero">
+    <h1>I Encuentro Científico-Educativo: Puentes</h1>
+
+    <div class="subtitulo">
+        Camino hacia la educación del futuro
+    </div>
+
+    <div class="eslogan">
+        Porque la innovación comienza con una inquietud
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a class="activo" href="index.html">Presentación</a></li>
+        <li class="nav-desplegable">
+            <button type="button" class="nav-trigger" aria-haspopup="true">Programa <span aria-hidden="true">▼</span></button>
+            <ul class="submenu">
+                <li><a href="programa.html">Puentes 2026/2027</a></li>
+            </ul>
+        </li>
+        <li><a href="inscripcion.html">Inscripción</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="inicio-bienvenida">
+        <h2>Bienvenidos a Puentes</h2>
+
+        <p class="texto-intro">
+            El I Encuentro Científico-Educativo: Puentes nace como un espacio de encuentro entre investigación,
+            práctica educativa e innovación. Un lugar para compartir experiencias, generar conexiones y construir
+            juntos la educación del futuro.
+        </p>
+    </section>
+
+    <section class="destacado encuentro-resumen">
+        <div class="cuenta-atras">
+            <span class="etiqueta-seccion">Cuenta atrás</span>
+            <h2>18 de noviembre de 2026</h2>
+
+            <div class="contador" aria-label="Cuenta atrás hasta el inicio del Encuentro">
+                <div>
+                    <strong id="dias">0</strong>
+                    <span>Días</span>
+                </div>
+                <div>
+                    <strong id="horas">0</strong>
+                    <span>Horas</span>
+                </div>
+                <div>
+                    <strong id="minutos">0</strong>
+                    <span>Minutos</span>
+                </div>
+                <div>
+                    <strong id="segundos">0</strong>
+                    <span>Segundos</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="datos-encuentro">
+            <span class="etiqueta-seccion">Información rápida</span>
+            <h2>Datos del encuentro</h2>
+
+            <div class="dato">
+                <strong>Fecha</strong>
+                <span>Miércoles, 18 de noviembre de 2026.</span>
+            </div>
+
+            <div class="dato">
+                <strong>Lugar</strong>
+                <span>Salón de Actos de la Facultad de Educación, Psicología y Ciencias del Deporte (Universidad de Huelva).</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinatarios">
+        <h2>¿Quién puede participar?</h2>
+
+        <div class="rejilla-tarjetas">
+            <article class="tarjeta-perfil">
+                <span aria-hidden="true">01</span>
+                <h3>Titulados de Máster</h3>
+            </article>
+
+            <article class="tarjeta-perfil">
+                <span aria-hidden="true">02</span>
+                <h3>Doctorandos/as</h3>
+            </article>
+
+            <article class="tarjeta-perfil">
+                <span aria-hidden="true">03</span>
+                <h3>Profesorado</h3>
+            </article>
+
+            <article class="tarjeta-perfil">
+                <span aria-hidden="true">04</span>
+                <h3>Investigadores/as</h3>
+            </article>
+
+            <article class="tarjeta-perfil">
+                <span aria-hidden="true">05</span>
+                <h3>Docentes en ejercicio</h3>
+            </article>
+        </div>
+
+        <p class="frase-cierre">Porque la innovación educativa necesita múltiples miradas.</p>
+    </section>
+
+    <section class="participa destacado">
+        <div>
+            <h2>Participa en Puentes</h2>
+            <p>
+                Puedes formar parte del Encuentro presentando una comunicación o asistiendo como oyente.
+            </p>
+        </div>
+
+        <div class="acciones-participa">
+            <a class="boton" href="inscripcion.html#comunicaciones" target="_blank" rel="noopener noreferrer">Presentar una comunicación</a>
+            <a class="boton boton-secundario" href="inscripcion.html#oyentes" target="_blank" rel="noopener noreferrer">Inscribirme como oyente</a>
+        </div>
+    </section>
+
+    <section class="que-es"></section>
+        <h2>¿Qué es Puentes?</h2>
+
+        <div class="rejilla-conceptos">
+            <article>
+                <h3>Espacio de encuentro académico</h3>
+            </article>
+
+            <article>
+                <h3>Intercambio de experiencias</h3>
+            </article>
+
+            <article>
+                <h3>Divulgación científico-educativa</h3>
+            </article>
+
+            <article>
+                <h3>Creación de redes profesionales</h3>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <strong>I Encuentro Científico-Educativo: Puentes</strong><br>
+    Camino hacia la educación del futuro
+</footer>
+
+<script>
+    const fechaEncuentro = new Date("2026-11-18T09:00:00+01:00").getTime();
+    const dias = document.getElementById("dias");
+    const horas = document.getElementById("horas");
+    const minutos = document.getElementById("minutos");
+    const segundos = document.getElementById("segundos");
+
+    function actualizarCuentaAtras(){
+        const distancia = Math.max(fechaEncuentro - Date.now(), 0);
+
+        dias.textContent = Math.floor(distancia / (1000 * 60 * 60 * 24));
+        horas.textContent = Math.floor((distancia / (1000 * 60 * 60)) % 24);
+        minutos.textContent = Math.floor((distancia / (1000 * 60)) % 60);
+        segundos.textContent = Math.floor((distancia / 1000) % 60);
+    }
+
+    actualizarCuentaAtras();
+    setInterval(actualizarCuentaAtras, 1000);
+</script>
+
+</body>
+</html>
