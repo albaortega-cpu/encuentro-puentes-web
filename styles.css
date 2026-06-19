@@ -354,7 +354,7 @@ h2{
 
 .rejilla-comites{
     display:grid;
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns:1fr;
     gap:1.5rem;
 }
 
@@ -779,6 +779,51 @@ h2{
     font-size:1.05rem;
 }
 
+.ambitos-tematicos{
+    margin:8rem 0 0;
+}
+
+.ambitos-tematicos .texto-intro{
+    margin-bottom:1.5rem; 
+    text-align: justify;
+    line-height: 1.9;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    
+}
+
+.rejilla-ambitos{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1rem;
+    margin-top:3rem;
+}
+
+.tarjeta-ambito{
+    background:var(--blanco);
+    border:1px solid rgba(124,69,85,.14);
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(46,35,72,.08);
+    padding:1.5rem;
+}
+
+.tarjeta-ambito span{
+    color:var(--ocre);
+    font-weight:700;
+}
+
+.tarjeta-ambito h3{
+    margin:1rem 0 .75rem;
+    color:var(--ciruela);
+    font-size:1.05rem;
+    line-height:1.35;
+}
+
+.tarjeta-ambito p{
+    margin:0;
+    text-align:left;
+}
+
 .frase-cierre{
     margin-top:4.5rem;
     color:var(--ciruela);
@@ -900,6 +945,7 @@ footer{
     }
 
     .rejilla-tarjetas,
+    .rejilla-ambitos,
     .rejilla-conceptos{
         grid-template-columns:1fr;
     }
