@@ -208,6 +208,14 @@ h2{
     background:var(--ciruela);
 }
 
+/* Indicador de foco visible para navegación por teclado. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible{
+    outline:3px solid var(--ocre);
+    outline-offset:4px;
+}
+
 .lista-elegante{
     background:var(--blanco);
     padding:1.5rem 2rem;
