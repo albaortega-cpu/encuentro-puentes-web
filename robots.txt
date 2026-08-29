@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://albaortega-cpu.github.io/encuentro-puentes-web/sitemap.xml
