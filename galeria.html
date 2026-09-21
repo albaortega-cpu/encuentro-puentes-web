@@ -63,20 +63,104 @@
         </p>
     </section>
 
-    <section class="destacado">
-        <h2>Galería de la primera edición</h2>
+   <section class="destacado">
+    <h2>Galería de la primera edición</h2>
 
-        <p>
-            La galería correspondiente a la primera edición del Encuentro recogerá las imágenes y materiales
-            audiovisuales generados durante el evento.
-        </p>
-    </section>
+    <p>
+        La primera edición del Encuentro Puentes queda recogida también a través de sus materiales gráficos y
+        visuales. Estos carteles forman parte de la identidad oficial de la edición 2026/2027.
+    </p>
+
+    <div class="galeria-carteles">
+       <figure>
+    <a href="Imágenes/cartel-puentes-vertical.png"
+       class="cartel-ampliable"
+       aria-label="Ampliar cartel vertical">
+        <img src="Imágenes/cartel-puentes-vertical.png"
+             alt="Cartel vertical oficial del I Encuentro Científico-Educativo: Puentes">
+    </a>
+    <figcaption>Cartel oficial · Formato vertical</figcaption>
+</figure>
+
+<figure>
+    <a href="Imágenes/cartel-puentes-horizontal.png"
+       class="cartel-ampliable"
+       aria-label="Ampliar cartel horizontal">
+        <img src="Imágenes/cartel-puentes-horizontal.png"
+             alt="Cartel horizontal oficial del I Encuentro Científico-Educativo: Puentes">
+    </a>
+    <figcaption>Cartel oficial · Formato horizontal</figcaption>
+</figure>
+    </div>
+</section>
 </main>
 
 <footer>
     <strong>I Encuentro Científico-Educativo: Puentes</strong><br>
     Camino hacia la educación del futuro
 </footer>
+<div class="visor-cartel" id="visor-cartel" aria-hidden="true">
+    <button type="button" class="visor-cerrar" aria-label="Cerrar imagen ampliada">
+        ×
+    </button>
+
+    <img id="imagen-ampliada" src="" alt="">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const enlacesCarteles = document.querySelectorAll(".cartel-ampliable");
+    const visorCartel = document.getElementById("visor-cartel");
+    const imagenAmpliada = document.getElementById("imagen-ampliada");
+    const botonCerrar = document.querySelector(".visor-cerrar");
+
+    enlacesCarteles.forEach(enlace => {
+
+        enlace.addEventListener("click", (evento) => {
+            evento.preventDefault();
+
+            const imagen = enlace.querySelector("img");
+
+            imagenAmpliada.src = enlace.getAttribute("href");
+            imagenAmpliada.alt = imagen.alt;
+
+            visorCartel.classList.add("activo");
+            visorCartel.setAttribute("aria-hidden", "false");
+
+            document.body.style.overflow = "hidden";
+        });
+
+    });
+
+    function cerrarVisor() {
+        visorCartel.classList.remove("activo");
+        visorCartel.setAttribute("aria-hidden", "true");
+
+        document.body.style.overflow = "";
+
+        imagenAmpliada.src = "";
+    }
+
+    botonCerrar.addEventListener("click", cerrarVisor);
+
+    visorCartel.addEventListener("click", (evento) => {
+        if (evento.target === visorCartel) {
+            cerrarVisor();
+        }
+    });
+
+    document.addEventListener("keydown", (evento) => {
+        if (
+            evento.key === "Escape" &&
+            visorCartel.classList.contains("activo")
+        ) {
+            cerrarVisor();
+        }
+    });
+
+});
+</script>
 
 </body>
 </html>

@@ -405,6 +405,38 @@ summary:focus-visible{
     font-style:italic;
 }
 
+.galeria-carteles{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:2rem;
+    margin-top:2rem;
+    align-items:start;
+}
+
+.galeria-carteles figure{
+    margin:0;
+    padding:1rem;
+    background:var(--marfil);
+    border:1px solid rgba(124,69,85,.14);
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(46,35,72,.08);
+}
+
+.galeria-carteles img{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:4px;
+}
+
+.galeria-carteles figcaption{
+    margin-top:.85rem;
+    color:var(--ciruela);
+    font-size:.95rem;
+    font-weight:700;
+    text-align:center;
+}
+
 .tarjeta-contacto,
 .tarjeta-entidad{
     background:var(--blanco);
@@ -1112,6 +1144,57 @@ footer{
     padding:2rem;
 }
 
+.visor-cartel{
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:2rem;
+    background:rgba(46,35,72,.88);
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:opacity .2s ease, visibility .2s ease;
+}
+
+.visor-cartel.activo{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+}
+
+.visor-cartel img{
+    display:block;
+    max-width:92vw;
+    max-height:92vh;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    box-shadow:0 8px 30px rgba(0,0,0,.35);
+}
+
+.visor-cerrar{
+    position:absolute;
+    top:1rem;
+    right:1.5rem;
+    width:48px;
+    height:48px;
+    padding:0;
+    border:0;
+    background:transparent;
+    color:white;
+    font-size:2.5rem;
+    font-weight:300;
+    line-height:1;
+    cursor:pointer;
+}
+
+.visor-cerrar:hover{
+    color:var(--ocre);
+}
+
 @media (max-width:768px){
     .hero{
         padding:5rem 1.5rem;
@@ -1259,6 +1342,24 @@ footer{
         width:100%;
         text-align:center;
     }
+
+    .galeria-carteles{
+        grid-template-columns:1fr;
+    }
+
+    .cartel-ampliable{
+    display:block;
+    cursor:zoom-in;
+}
+
+.cartel-ampliable img{
+    transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.cartel-ampliable:hover img{
+    transform:scale(1.015);
+    box-shadow:0 6px 18px rgba(46,35,72,.16);
+}
 
     .landing-comunicaciones section{
         margin-bottom:5rem;
