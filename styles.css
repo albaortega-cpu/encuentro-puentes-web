@@ -1379,3 +1379,204 @@ footer{
         display:block;
     }
 }
+/* Mesa inaugural del cronograma */
+
+.lista-mesa-inaugural {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.lista-mesa-inaugural li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 22px;
+}
+
+.lista-mesa-inaugural li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--ocre);
+    font-weight: bold;
+}
+
+.lista-mesa-inaugural li strong {
+    display: block;
+    color: var(--vino);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.lista-mesa-inaugural li span {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+}
+
+.lista-mesa-inaugural li span + span {
+    color: #766B78;
+    font-size: 0.85rem;
+}
+/* Paneles de comunicaciones */
+
+.panel-comunicaciones {
+    padding-top: 1.2rem;
+}
+
+.panel-comunicaciones h3 {
+    color: var(--vino);
+    margin: 0 0 1rem;
+    font-size: 1.15rem;
+}
+
+.moderador-panel {
+    margin: 0 0 1.5rem !important;
+    color: var(--vino);
+}
+
+.lista-comunicaciones {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.comunicacion-item {
+    position: relative;
+    padding-left: 18px;
+    margin: 0;
+}
+
+.comunicacion-item::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--ocre);
+    font-weight: bold;
+}
+
+.hora-comunicacion {
+    display: block;
+    color: var(--vino);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.autores-comunicacion {
+    display: block;
+    color: var(--vino);
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.titulo-comunicacion {
+    display: inline-block;
+    color: var(--ciruela);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.titulo-comunicacion:hover {
+    color: var(--ocre);
+    text-decoration: underline;
+}
+
+.titulo-comunicacion span {
+    color: var(--ocre);
+    font-size: 0.85rem;
+    margin-left: 3px;
+}
+
+.nota-horarios {
+    margin: 1.5rem 0 0 !important;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(124, 69, 85, .12);
+    color: #766B78;
+    font-size: 0.82rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+/* =================================
+   DESPLEGABLES INTERIORES: PANELES
+   ================================= */
+
+.lista-paneles {
+    display: grid;
+    gap: 0.8rem;
+    padding: 1.2rem 0;
+}
+
+.panel-detalle {
+    background: var(--marfil);
+    border: 1px solid rgba(124, 69, 85, .18);
+    border-radius: 7px;
+    overflow: hidden;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.panel-detalle:hover,
+.panel-detalle[open] {
+    border-color: rgba(212, 138, 76, .65);
+    box-shadow: 0 3px 9px rgba(46, 35, 72, .07);
+}
+
+/* Cabecera horizontal del panel */
+
+.panel-detalle summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    color: var(--ciruela);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.panel-detalle summary::-webkit-details-marker {
+    display: none;
+}
+
+.panel-detalle summary::after {
+    content: "+";
+    flex-shrink: 0;
+    color: var(--ocre);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.panel-detalle[open] summary::after {
+    content: "−";
+}
+
+.nombre-panel {
+    display: block;
+    min-width: 0;
+}
+
+/* Contenido interior del panel */
+
+.contenido-panel {
+    padding: 1.2rem;
+    border-top: 1px solid rgba(124, 69, 85, .14);
+}
+
+.moderador-panel {
+    margin: 0 0 1.5rem !important;
+    color: var(--vino);
+}
+
+.cargo-comunicacion {
+    display: block;
+    color: #766B78;
+    font-size: 0.88rem;
+    margin-top: 3px;
+    margin-bottom: 4px;
+}
