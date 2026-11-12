@@ -376,7 +376,7 @@ summary:focus-visible{
     border:1px solid rgba(124,69,85,.14);
     border-top:5px solid var(--ocre);
     border-radius:8px;
-    padding:1.5rem;
+    padding:2rem;
     box-shadow:0 2px 8px rgba(46,35,72,.08);
 }
 
@@ -387,6 +387,10 @@ summary:focus-visible{
 
 .tarjeta-comite p{
     margin-bottom:0;
+}
+
+.lista-personas li span::before {
+    content: " — ";
 }
 
 .lista-personas{
