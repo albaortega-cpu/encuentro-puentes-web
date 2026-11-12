@@ -285,7 +285,7 @@ summary:focus-visible{
     box-shadow:0 6px 16px rgba(46,35,72,.12);
 }
 
-.programa-detalle summary{
+.programa-detalle > summary{
     display:grid;
     grid-template-columns:150px 1fr auto;
     gap:1rem;
@@ -296,11 +296,11 @@ summary:focus-visible{
     list-style:none;
 }
 
-.programa-detalle summary::-webkit-details-marker{
+.programa-detalle > summary::-webkit-details-marker{
     display:none;
 }
 
-.programa-detalle summary:after{
+.programa-detalle > summary:after{
     content:"+";
     justify-self:end;
     color:var(--ocre);
@@ -309,7 +309,7 @@ summary:focus-visible{
     line-height:1;
 }
 
-.programa-detalle[open] summary:after{
+.programa-detalle[open] > summary:after{
     content:"-";
 }
 
@@ -1287,24 +1287,24 @@ footer{
         width:100%;
     }
 
-    .programa-detalle summary{
+    .programa-detalle > summary{
         grid-template-columns:1fr auto;
         gap:.35rem;
         padding:1rem 1.2rem;
     }
 
-    .programa-detalle summary .hora,
-    .programa-detalle summary .actividad{
+    .programa-detalle > summary .hora,
+    .programa-detalle > summary .actividad{
         grid-column:1;
         min-width:0;
     }
 
-    .programa-detalle summary:after{
+    .programa-detalle > summary:after{
         position:absolute;
         right:1.2rem;
     }
 
-    .programa-detalle summary{
+    .programa-detalle > summary{
         position:relative;
     }
 
