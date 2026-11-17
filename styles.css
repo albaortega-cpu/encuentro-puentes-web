@@ -1584,3 +1584,24 @@ footer{
     margin-top: 3px;
     margin-bottom: 4px;
 }
+
+/* Código QR de participación en la apertura */
+.qr-apertura {
+    max-width: 320px;
+    margin: 1.5rem auto .5rem;
+    text-align: center;
+}
+
+.qr-apertura img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.qr-apertura figcaption {
+    margin-top: .75rem;
+    color: var(--vino);
+    font-size: .95rem;
+    font-weight: 600;
+}
