@@ -1605,3 +1605,29 @@ footer{
     font-size: .95rem;
     font-weight: 600;
 }
+
+/* QR de control de asistencia */
+.qr-asistencia {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(124,69,85,.18);
+    text-align: center;
+}
+
+.qr-asistencia h3 {
+    color: var(--ciruela);
+    margin-bottom: .5rem;
+}
+
+.qr-asistencia p {
+    font-size: .95rem;
+}
+
+.qr-asistencia img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 1rem auto 0;
+    border-radius: 8px;
+}
